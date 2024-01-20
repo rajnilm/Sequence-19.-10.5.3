@@ -1,0 +1,110 @@
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\setlength{\arrayrulewidth}{0.5mm}
+\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{1.5}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\begin{document}
+\title{Sequence(19) 10.5.3}
+\author{EE23BTECH11051-Rajnil Malviya}
+\date{January 2024}
+\maketitle
+\subsection*{\textit{Question :-}}
+200 logs are stacked in the following manner: 20 logs in the bottom row, 19 in the next row,
+18 in the row next to it and so on . In how many rows are the 200 logs placed
+and how many logs are in the top row?
+\begin{table}[h!]
+   
+        \input{tables/t1}
+       
+    \end{table}
+\subsection*{\textit{Solution :-}}
+
+For an Arithmetic Progression :-
+\begin{align}a_n-a_{n-1} \; = \; d \end{align}
+\begin{align}a_{n-1}-a_{n-2} \; = \; d \end{align}
+\begin{align}a_{n-2}-a_{n-3} \; = \; d \end{align}
+$$.$$
+$$.$$
+$$.$$
+\begin{align}a_2-a_{1} \; = \; d \end{align}
+adding all these equations :-
+\begin{align}a_{n}-a_{1} \; = \; \brak{n-1} d \end{align}
+\begin{align}a_{n} \; = \; a_1+\brak{n-1} d \end{align}
+Sum upto n terms of A.P :-
+\begin{align}S_n=a_1+a_2+....+a_n\end{align}
+\begin{align}S_n=a_n+a_{n-1}+....+a_1\end{align}
+adding equations 7 and 8 
+\begin{align}2 S_n=(a_1+a_n)+(a_2+a_{n-2})+....+(a_n+a_1)\end{align}
+Substituting by using equation 6 \\
+$2 S_n=[a_1+(a_1 +(n-1) d)]+ ...$
+\begin{align}....+[(a_1 + (n-1) d) + a_1]\end{align}
+\begin{align}S_n=\frac{n}{2}\brak{2a_1 + (n-1) d}\end{align}
+\begin{table}[h!]
+   
+        \input{tables/t2}
+       
+    \end{table}
+Using equation 4 
+\begin{align}d=a_2-a_1\end{align}
+Substituting from Table:II
+\begin{align}d=-1\end{align}
+\begin{table}[h!]
+   
+        \input{tables/t3}
+       
+    \end{table}
+For Practical reasons 
+
+    
+\begin{align}a_n>0\end{align}
+Using equation 13 and substituting in equation 6
+\begin{align}20+(n-1)(-1)>0\end{align}
+\begin{align}n<21\end{align}
+Using equation 11 and substituting from Table:2
+\begin{align}n^2-41 n +400 = 0\end{align}
+\begin{align}n=16\; ,\;25\end{align}
+From equation 16 
+\begin{align}n=16\end{align}
+Substituting in equation 6
+\begin{align}a_n=20+(16-1)(-1)\end{align}
+\begin{align}a_n=5\end{align}
+Ans . There are 16 rows and 5 logs in top row .
+\end{document}
